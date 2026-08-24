@@ -1,0 +1,6 @@
+streamlit
+pydantic
+pdfplumber
+pytesseract
+pillow
+ollama
