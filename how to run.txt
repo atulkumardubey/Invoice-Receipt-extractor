@@ -1,0 +1,54 @@
+=================================================
+INVOICE RECEIPT EXTRACTOR - RUN INSTRUCTIONS
+=================================================
+
+1. START OLLAMA (LLM FOR EXTRACTION)
+
+Open PowerShell and run:
+
+ollama serve
+
+Then pull the model (first time only):
+
+ollama pull llama3.1:8b
+
+
+=================================================
+2. START BACKEND API
+=================================================
+
+Open a new PowerShell window from the project root folder and run:
+
+C:\Users\atul.kumar.dubey\AppData\Local\Programs\Python\Python314\python.exe -m uvicorn server:app --reload --port 8000
+
+Backend URL:
+http://127.0.0.1:8000
+
+
+=================================================
+3. START REACT FRONTEND
+=================================================
+
+Open another PowerShell window and run:
+
+cd frontend
+
+npm install
+
+npm run dev
+
+Frontend URL:
+http://localhost:5173
+
+Open the above URL in your browser.
+
+
+=================================================
+OPTIONAL PREREQUISITE
+=================================================
+
+For PNG/JPG image uploads, install Tesseract OCR separately.
+
+Note:
+- PDF files are handled directly by pdfplumber.
+- Tesseract is required only for image-based 

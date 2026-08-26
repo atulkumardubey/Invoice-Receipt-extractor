@@ -4,3 +4,8 @@ pdfplumber
 pytesseract
 pillow
 ollama
+openai
+python-dotenv
+fastapi
+uvicorn[standard]
+python-multipart

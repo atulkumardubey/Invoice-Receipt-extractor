@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #262730;
+  font-family: "Source Sans Pro", "Segoe UI", sans-serif;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.caption {
+  color: #6b6f76;
+  font-size: 0.95rem;
+  margin-top: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e6e6e6;
+  margin: 1.5rem 0;
+}
+
+.uploader {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d0d2d6;
+  border-radius: 8px;
+  background: #f8f9fb;
+}
+
+.info-box,
+.warning-box,
+.error-box {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.info-box {
+  background: #e8f4fd;
+  border: 1px solid #b6e0fe;
+}
+
+.warning-box {
+  background: #fff8e6;
+  border: 1px solid #ffe69c;
+}
+
+.error-box {
+  background: #fde8e8;
+  border: 1px solid #f8b4b4;
+}
+
+.error-box pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.primary-button,
+.secondary-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #ff4b4b;
+  background: #ff4b4b;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  background: white;
+  color: #262730;
+  border: 1px solid #d0d2d6;
+}
+
+.fields-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.fields-table th,
+.fields-table td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.fields-table th {
+  background: #f8f9fb;
+}
+
+.text-expander {
+  margin-top: 1.5rem;
+}
+
+.text-expander pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: #f8f9fb;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+}
+
+.provider-selector {
+  margin-bottom: 0.5rem;
+}
+
+.provider-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.provider-options {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.provider-option {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.65rem 1rem;
+  border: 2px solid #d0d2d6;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f8f9fb;
+  transition: border-color 0.15s, background 0.15s;
+  min-width: 140px;
+}
+
+.provider-option input[type="radio"] {
+  display: none;
+}
+
+.provider-option.selected {
+  border-color: #76b900;
+  background: #f2fae6;
+}
+
+.provider-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #262730;
+}
+
+.provider-option.selected .provider-name {
+  color: #4a7c00;
+}
+
+.provider-detail {
+  font-size: 0.78rem;
+  color: #6b6f76;
+}
