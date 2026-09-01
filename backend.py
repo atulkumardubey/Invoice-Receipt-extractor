@@ -21,6 +21,8 @@ except ImportError:
 
 from models import InvoiceFields
 
+pytesseract.pytesseract.tesseract_cmd = r"C:\Users\atul.kumar.dubey\AppData\Local\Tesseract-OCR\tesseract.exe"
+
 OLLAMA_MODEL = "llama3.1:8b"
 NVIDIA_MODEL = "nvidia/nemotron-3.5-lightning-30b-a3b"
 NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
@@ -82,7 +84,14 @@ def read_file(uploaded_file) -> str:
         )
 
     image = Image.open(BytesIO(data))
-    return pytesseract.image_to_string(image).strip()
+    try:
+        return pytesseract.image_to_string(image).strip()
+    except pytesseract.TesseractNotFoundError:
+        raise ValueError(
+            "Tesseract-OCR is not installed or not in PATH. "
+            "Download the installer from https://github.com/UB-Mannheim/tesseract/wiki, "
+            "install it, then restart the server. PDF files work without Tesseract."
+        )
 
 
 def _extract_json(raw: str) -> dict:
