@@ -141,8 +141,8 @@ export default function App() {
               <table className="fields-table">
                 <thead>
                   <tr>
-                    <th>field</th>
-                    <th>value</th>
+                    <th>Field</th>
+                    <th>Value</th>
                   </tr>
                 </thead>
                 <tbody>
