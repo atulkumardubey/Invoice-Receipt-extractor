@@ -149,7 +149,7 @@ export default function App() {
                   {Object.entries(result.fields).map(([name, value]) => (
                     <tr key={name}>
                       <td>{name}</td>
-                      <td>{value === null ? "null — blank, never guessed" : String(value)}</td>
+                      <td>{value === null ? "null" : String(value)}</td>
                     </tr>
                   ))}
                 </tbody>

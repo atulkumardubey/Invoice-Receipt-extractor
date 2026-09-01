@@ -52,3 +52,6 @@ For PNG/JPG image uploads, install Tesseract OCR separately.
 Note:
 - PDF files are handled directly by pdfplumber.
 - Tesseract is required only for image-based 
+
+To run the test cases-
+python -m pytest tests/ -v
